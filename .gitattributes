@@ -1,9 +1,19 @@
 # Exclude platform-specific boilerplates from GitHub language statistics
-android/**/* linguist-documentation
-ios/**/* linguist-documentation
-macos/**/* linguist-documentation
-windows/**/* linguist-documentation
-linux/**/* linguist-documentation
-web/**/* linguist-documentation
-build/**/* linguist-documentation
-.dart_tool/**/* linguist-documentation
+android/**/* linguist-vendored
+ios/**/* linguist-vendored
+macos/**/* linguist-vendored
+windows/**/* linguist-vendored
+linux/**/* linguist-vendored
+web/**/* linguist-vendored
+build/**/* linguist-vendored
+.dart_tool/**/* linguist-vendored
+
+# Disable language detection in native folders
+android/** linguist-detectable=false
+ios/** linguist-detectable=false
+macos/** linguist-detectable=false
+windows/** linguist-detectable=false
+linux/** linguist-detectable=false
+web/** linguist-detectable=false
+build/** linguist-detectable=false
+.dart_tool/** linguist-detectable=false
