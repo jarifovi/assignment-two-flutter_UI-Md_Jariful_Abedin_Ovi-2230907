@@ -10,7 +10,7 @@ class ProfileScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFF9FAFB),
       appBar: const CustomHeader(),
       body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
+        physics: const AlwaysScrollableScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
           child: Column(
