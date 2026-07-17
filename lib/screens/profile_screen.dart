@@ -64,7 +64,7 @@ class ProfileScreen extends StatelessWidget {
 
               _buildInfoCard(
                 title: 'Email',
-                value: '2230807@iub.edu.bd',
+                value: '2230907@iub.edu.bd',
               ),
               const SizedBox(height: 14),
 
