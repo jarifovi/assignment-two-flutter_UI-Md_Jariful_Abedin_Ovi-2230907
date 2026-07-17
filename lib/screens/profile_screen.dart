@@ -32,27 +32,19 @@ class ProfileScreen extends StatelessWidget {
                 width: 100,
                 height: 100,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF4C49ED),
                   shape: BoxShape.circle,
+                  image: const DecorationImage(
+                    image: AssetImage('assets/images/profile.jpg'),
+                    fit: BoxFit.cover,
+                  ),
                   border: Border.all(color: Colors.white, width: 4),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFF4C49ED).withValues(alpha: 0.25),
+                      color: const Color(0xFF4C49ED).withValues(alpha: 0.2),
                       blurRadius: 15,
                       offset: const Offset(0, 6),
                     ),
                   ],
-                ),
-                child: const Center(
-                  child: Text(
-                    'MJO', // Student Initials
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1,
-                    ),
-                  ),
                 ),
               ),
               const SizedBox(height: 28),

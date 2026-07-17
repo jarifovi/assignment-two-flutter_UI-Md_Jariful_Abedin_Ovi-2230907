@@ -15,29 +15,23 @@ class CustomHeader extends StatelessWidget implements PreferredSizeWidget {
           Row(
             children: [
               // Avatar with Student Initials
+              // Avatar with Student Profile Image
               Container(
                 width: 44,
                 height: 44,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF4C49ED),
                   shape: BoxShape.circle,
+                  image: const DecorationImage(
+                    image: AssetImage('assets/images/profile.jpg'),
+                    fit: BoxFit.cover,
+                  ),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFF4C49ED).withValues(alpha: 0.3),
-                      blurRadius: 8,
-                      offset: const Offset(0, 3),
+                      color: Colors.black.withValues(alpha: 0.08),
+                      blurRadius: 6,
+                      offset: const Offset(0, 2),
                     ),
                   ],
-                ),
-                child: const Center(
-                  child: Text(
-                    'JO', // Initials for Md. Jariful Abedin Ovi
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
                 ),
               ),
               const SizedBox(width: 12),
