@@ -1,0 +1,9 @@
+# Exclude platform-specific boilerplates from GitHub language statistics
+android/**/* linguist-documentation
+ios/**/* linguist-documentation
+macos/**/* linguist-documentation
+windows/**/* linguist-documentation
+linux/**/* linguist-documentation
+web/**/* linguist-documentation
+build/**/* linguist-documentation
+.dart_tool/**/* linguist-documentation
