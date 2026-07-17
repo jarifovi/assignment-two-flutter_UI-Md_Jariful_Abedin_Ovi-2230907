@@ -123,7 +123,11 @@ class _MainScreenState extends State<MainScreen> {
         setState(() {
           _currentIndex = index;
         });
-        _pageController.jumpToPage(index);
+        _pageController.animateToPage(
+          index,
+          duration: const Duration(milliseconds: 350),
+          curve: Curves.easeInOutCubic,
+        );
       },
       behavior: HitTestBehavior.opaque,
       child: AnimatedContainer(
