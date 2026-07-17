@@ -198,7 +198,7 @@ class HomeScreen extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 children: [
                   _buildTransactionItem(
-                    icon: Icons.movie_creation_outlined,
+                    icon: '🎬',
                     title: 'Netflix Subscription',
                     category: 'Entertainment',
                     time: 'Today',
@@ -206,7 +206,7 @@ class HomeScreen extends StatelessWidget {
                     isPositive: false,
                   ),
                   _buildTransactionItem(
-                    icon: Icons.coffee_outlined,
+                    icon: '☕',
                     title: 'Coffee Shop',
                     category: 'Food & Drink',
                     time: 'Today',
@@ -214,15 +214,15 @@ class HomeScreen extends StatelessWidget {
                     isPositive: false,
                   ),
                   _buildTransactionItem(
-                    icon: Icons.monetization_on_outlined,
+                    icon: '💰',
                     title: 'Salary Deposit',
                     category: 'Income',
                     time: 'Yesterday',
-                    amount: '+\$3500.00',
+                    amount: '+\$3,500.00',
                     isPositive: true,
                   ),
                   _buildTransactionItem(
-                    icon: Icons.shopping_cart_outlined,
+                    icon: '🛒',
                     title: 'Grocery Store',
                     category: 'Shopping',
                     time: 'Yesterday',
@@ -230,7 +230,7 @@ class HomeScreen extends StatelessWidget {
                     isPositive: false,
                   ),
                   _buildTransactionItem(
-                    icon: Icons.shopping_bag_outlined,
+                    icon: '🛒',
                     title: 'Amazon Purchase',
                     category: 'Shopping',
                     time: '2 days ago',
@@ -295,7 +295,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildTransactionItem({
-    required IconData icon,
+    required dynamic icon,
     required String title,
     required String category,
     required String time,
@@ -322,15 +322,20 @@ class HomeScreen extends StatelessWidget {
           // Icon Container
           Container(
             padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: const Color(0xFFF3F4F6),
+            decoration: const BoxDecoration(
+              color: Color(0xFFF3F4F6),
               shape: BoxShape.circle,
             ),
-            child: Icon(
-              icon,
-              color: const Color(0xFF4B5563),
-              size: 22,
-            ),
+            child: icon is IconData
+                ? Icon(
+                    icon,
+                    color: const Color(0xFF4B5563),
+                    size: 22,
+                  )
+                : Text(
+                    icon as String,
+                    style: const TextStyle(fontSize: 20),
+                  ),
           ),
           const SizedBox(width: 14),
           // Title & Subtitle
