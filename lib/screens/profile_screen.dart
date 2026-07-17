@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/custom_header.dart';
+import '../widgets/ultra_smooth_physics.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -10,7 +11,7 @@ class ProfileScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFF9FAFB),
       appBar: const CustomHeader(),
       body: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
+        physics: const UltraSmoothScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
           child: Column(
