@@ -6,7 +6,7 @@ class CustomHeader extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 48.0, bottom: 12.0),
+      padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 40.0, bottom: 8.0),
       color: Colors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,8 +73,8 @@ class CustomHeader extends StatelessWidget implements PreferredSizeWidget {
               Container(
                 width: 44,
                 height: 44,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF3F4F6),
+                decoration: const BoxDecoration(
+                  color: Color(0xFFF3F4F6),
                   shape: BoxShape.circle,
                 ),
                 child: IconButton(
@@ -108,5 +108,5 @@ class CustomHeader extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(80);
+  Size get preferredSize => const Size.fromHeight(96);
 }
